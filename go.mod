@@ -1,3 +1,3 @@
-module github.com/dnb-org/dnb-hugo-opensearch
+module github.com/davidsneighbour/hugo-opensearch
 
 go 1.17

@@ -22,7 +22,7 @@ Then add this module to your required modules in config.toml.
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/dnb-org/dnb-hugo-opensearch"
+path = "github.com/davidsneighbour/hugo-opensearch"
 ```
 
 The next time you run `hugo` it will download the latest version of the module.
@@ -80,7 +80,7 @@ The configuration for this component is located in `data/dnb/opensearch/config.t
 To update this module:
 
 ```
-hugo mod get -u github.com/dnb-org/dnb-hugo-opensearch
+hugo mod get -u github.com/davidsneighbour/hugo-opensearch
 ```
 
 To update all modules:

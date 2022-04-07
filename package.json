@@ -1,6 +1,6 @@
 {
   "name": "dnb-hugo-opensearch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "Opensearch configuration for Hugo",
   "author": {

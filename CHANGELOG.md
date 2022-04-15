@@ -20,4 +20,4 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Chore
 
-* initial commit, current version ([6aeed0e](https://github.com/dnb-org/dnb-hugo-opensearch/commit/6aeed0e2bc1450c07048fc201c6369e708523427))
+* initial commit, current version ([6aeed0e](https://github.com/davidsneighbour/hugo-opensearch/commit/6aeed0e2bc1450c07048fc201c6369e708523427))

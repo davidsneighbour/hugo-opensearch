@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.0...v0.1.1) (2022-04-20)
+
+
+### Build System
+
+* update Github organization name & use newer NPM dependencies ([#37](https://github.com/davidsneighbour/hugo-opensearch/issues/37)) ([010b3fd](https://github.com/davidsneighbour/hugo-opensearch/commit/010b3fd5757c06304eaafcd1f6bb3c2a4658c9c2))
+
 ## [0.1.0](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.0.2...v0.1.0) (2022-04-07)
 
 

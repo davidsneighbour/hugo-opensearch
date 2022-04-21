@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.1...v0.1.2) (2022-04-21)
+
+
+### Build System
+
+* update build system ([fdd2905](https://github.com/davidsneighbour/hugo-opensearch/commit/fdd2905d9444551e40b7ddf7f1b2469461fbc013))
+
+
+### Chore
+
+* cleanup build scripts ([798deb3](https://github.com/davidsneighbour/hugo-opensearch/commit/798deb3e10041c903678fee370bf4d023a49c068))
+* **config:** update dependabot runs to monthly ([2ddffa0](https://github.com/davidsneighbour/hugo-opensearch/commit/2ddffa0b14d361b3596714263e662adae7e83cb6))
+* fix setup files ([8a3c927](https://github.com/davidsneighbour/hugo-opensearch/commit/8a3c9270054df15d65dd41477d7437641391d304))
+
 ### [0.1.1](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.0...v0.1.1) (2022-04-20)
 
 

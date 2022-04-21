@@ -1,5 +1,9 @@
+# either:
+# copy this section into your own configuration
+# or:
+# add `_merge = "deep"` into the `[outputFormats]` section of your configuration
 [OpenSearch]
-mediatype = "application/opensearchdescription+xml"
 baseName = "opensearch"
 isPlainText = true
+mediatype = "application/opensearchdescription+xml"
 notAlternative = true

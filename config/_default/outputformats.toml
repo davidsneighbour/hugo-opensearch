@@ -1,7 +1,3 @@
-# either:
-# copy this section into your own configuration
-# or:
-# add `_merge = "deep"` into the `[outputFormats]` section of your configuration
 [OpenSearch]
 baseName = "opensearch"
 isPlainText = true

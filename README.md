@@ -1,93 +1,57 @@
 <!--- CARD BEGIN --->
 
-![DNB-Hugo/HEAD](.github/github-card-dark.png#gh-dark-mode-only)
-![DNB-Hugo/HEAD](.github/github-card-light.png#gh-light-mode-only)
-
+![DNB-Hugo/hugo-opensearch](.github/github-card-dark.png#gh-dark-mode-only)
+![DNB-Hugo/hugo-opensearch](.github/github-card-light.png#gh-light-mode-only)
 <!--- CARD END --->
 
-# David's Neighbour GoHugo Component / Opensearch
+# Hugo Component / Opensearch
 
 This is a Hugo theme component that adds an open search configuration file to your website.
 
-### Installing
+<!--- THINGSTOKNOW BEGIN --->
+<!--- THINGSTOKNOW END --->
+<!--- INSTALLUPDATE BEGIN --->
+<!--- INSTALLUPDATE END --->
 
-Enable modules in your own repository:
+## Configuration
 
-```bash
-hugo mod init github.com/username/reponame
-```
-
-Then add this module to your required modules in config.toml.
-
-```toml
-[module]
-[[module.imports]]
-path = "github.com/davidsneighbour/hugo-opensearch"
-```
-
-The next time you run `hugo` it will download the latest version of the module.
-
-To make this component work you need to add some lines to your config.toml.
-
-```toml
-[outputFormats]
-[outputFormats.OpenSearch]
-  mediatype = "application/opensearchdescription+xml"
-  baseName = "opensearch"
-  isPlainText = true
-  notAlternative = true
-
-[mediaTypes]
-[mediaTypes."application/opensearchdescription+xml"]
-  suffixes = ["xml"]
-  delimiter = ""
-```
-
-:warning: Careful: Do not add a second `[outputFormats]` or `[mediaTypes]` section. If you already have one of these sections then add the subitems to the existing sections.
-
-Add OpenSearch to your home output formats:
+Add OpenSearch to your home output formats. You should already have an `[outputs]` section, add `"OpenSearch"` to it. Add them only to the `home` parameter.
 
 ```toml
 [outputs]
 home = [ ... others ... , "OpenSearch" ]
 ```
 
-You should already have an `[output]` section, add `"OpenSearch"` to it. Add them only to the `home` parameter.
-
-This will add a file opensearch.xml to your Website. You should now add a meta tag to your header that helps with automatically finding this file:
+This will add a `opensearch.xml` to your Website. You should now add a meta tag to your header that helps with automatically finding this file:
 
 ```gotemplate
 {{ partial "head/opensearch.html" . }}
 ```
 
-### Configuration
+❗Please note, that this module adds custom media types and output formats. If you use anything else than `_merge = "deep"` in the `[outputFormats]` and `[mediaTypes]` sectiona of your configuration then you will have to add these types manually.
 
-The configuration for this component is located in `data/dnb/opensearch/config.toml`. If you have no configuration file in your own repository then this component works with sensible defaults. If you want to overwrite one configuration parameter, you need to copy the entire configuration file over, because your local copy will override the default settings and leaves configuration paramters undefined.
+The following configuration parameters are available in `site.Params.dnb.opensearch`:
 
-| Parameter           | Description                                                                                                                                                                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`             | Search title. MUST be shorter than 16 characters and MUST NOT contain markup. Default is `SITETITLE`.                                                                                                                                           |
-| `description`       | Search description, MUST be shorter than 1024 characters and MUST NOT contain markup. Default is `Search on SITETITLE`.                                                                                                                         |
-| `query_url`         | Url to the search result page. Replace the location of the searchterm with `{searchterms}`. Default is `search/?q={searchTerms}`. This variable will be prefixed with the `baseUrl`                                                             |
-| `search_form`       | Url to the search form. Default is `search/`. This variable will be prefixed with the `baseUrl` and is used by Firefox to link to the page with the search form.                                                                                |
-| `output_encoding`   | Encoding of the output of the search. Default is `UTF-8`.                                                                                                                                                                                       |
-| `input_encoding`    | Encoding of the input of the search. Default is `UTF-8`.                                                                                                                                                                                        |
+<!-- prettier-ignore -->
+| Parameter | Description |
+| --- | --- |
+| `title` | Search title. MUST be shorter than 16 characters and MUST NOT contain markup. Default is `site.Title`. |
+| `description` | Search description, MUST be shorter than 1024 characters and MUST NOT contain markup. Default is `Search on {{ site.Title }}`. |
+| `query_url` | Url to the search result page. Replace the location of the searchterm with `{searchterms}`. Default is `search/?q={searchTerms}`. This variable will be prefixed with the `baseUrl` |
+| `search_form` | Url to the search form. Default is `search/`. This variable will be prefixed with the `baseUrl` and is used by Firefox to link to the page with the search form. |
+| `output_encoding` | Encoding of the output of the search. Default is `UTF-8`. |
+| `input_encoding` | Encoding of the input of the search. Default is `UTF-8`. |
 | `enable_autoupdate` | Enable auto update for the search update. Default is `true`. At this time, addons.mozilla.org (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, then set this parameter to `false`. |
-| `hookLink`          | Link to the component's README file for warnings and errors.                                                                                                                                                                                    |
+| `hookLink` | Link to the component's README file for warnings and errors. |
 
-### Updating
+## Notes
 
-To update this module:
+- Remote favicons [must not be larger than 10kB](https://bugzilla.mozilla.org/show_bug.cgi?id=361923).
 
-```
-hugo mod get -u github.com/davidsneighbour/hugo-opensearch
-```
+## Read more
 
-To update all modules:
-
-```
-hugo mod get -u
-```
+- [OpenSearch description format on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/OpenSearch)
+- [Official Archive of the Specification](https://github.com/dewitt/opensearch)
 
 <!--- COMPONENTS BEGIN --->
 
@@ -103,7 +67,7 @@ hugo mod get -u
 | [hugo-functions](https://github.com/davidsneighbour/hugo-functions) | A Hugo theme component with helper functions for other projects. |
 | [hugo-giscus](https://github.com/davidsneighbour/hugo-giscus) | The Giscus comment system layout for GoHugo. |
 | [hugo-head](https://github.com/davidsneighbour/hugo-head) | A GoHugo theme component that solves the old question of "What tags belong into the `<head>` tag of my website?" |
-| [hugo-hooks](https://github.com/davidsneighbour/hugo-hooks) | Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes.  |
+| [hugo-hooks](https://github.com/davidsneighbour/hugo-hooks) | Hooks for GoHugo layouts. An easy way for theme developers to let users add to their themes. |
 | [hugo-humans](https://github.com/davidsneighbour/hugo-humans) | Your site is made by humans. Humans.txt is naming them. |
 | [hugo-icons](https://github.com/davidsneighbour/hugo-icons) | Icons for your Hugo website. |
 | [hugo-internals](https://github.com/davidsneighbour/hugo-internals) | Better internal templates for GoHugo |

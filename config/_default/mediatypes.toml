@@ -1,7 +1,2 @@
-# either:
-# copy this section into your own configuration
-# or:
-# add `_merge = "deep"` into the `[mediaTypes]` section of your configuration
 ["application/opensearchdescription+xml"]
 suffixes = ["xml"]
-delimiter = ""

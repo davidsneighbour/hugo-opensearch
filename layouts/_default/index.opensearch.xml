@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-{{- $config := site.Params.dnb.opensearch }}
-{{- $autoupdate := $config.enable_autoupdate | default true }}
-{{- $title := $config.title | default (printf "%s" site.Title) }}
+{{- $config := site.Params.dnb.opensearch -}}
+{{- $autoupdate := default true $config.enable_autoupdate -}}
+{{- $title := default (printf "%s" site.Title) $config.title -}}
 {{- $messageslug := "%s: %s (see %s)" -}}
 {{- $slug := "opensearch" -}}
 {{- if gt (len $title) 16 }}
@@ -15,7 +15,7 @@
     )
   -}}
 {{- end }}
-{{- $description := $config.description | default (printf "%s %s" "Search on" site.Title) }}
+{{- $description := default (printf "%s %s" "Search on" site.Title) $config.description }}
 {{- if gt (len $description) 1024 }}
   {{- partial "debug.html"
     (dict
@@ -69,8 +69,8 @@
 <Url type="text/html" method="get" template="{{- $searchUrl -}}"/>
 <Image height="32" width="32" type="image/png">{{- $image -}}</Image>
 <moz:SearchForm>{{- $searchForm -}}</moz:SearchForm>
-<OutputEncoding>{{- $config.output_encoding | default "UTF-8" -}}</OutputEncoding>
-<InputEncoding>{{- $config.input_encoding | default "UTF-8" -}}</InputEncoding>
+<OutputEncoding>{{- default "UTF-8" $config.output_encoding -}}</OutputEncoding>
+<InputEncoding>{{-  default "UTF-8" $config.input_encoding -}}</InputEncoding>
 {{- if $autoupdate -}}
   <Url type="application/opensearchdescription+xml" rel="self" template="{{ "opensearch.xml" | absLangURL }}" />
 {{- end -}}

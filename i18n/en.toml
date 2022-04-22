@@ -17,4 +17,4 @@ other = "parameter title must be 16 or less characters"
 
 [dnb-opensearch-search-title]
 description = "Variable is the site title"
-other = "Search {{ . }}"
+other = "Search on {{ . }}"

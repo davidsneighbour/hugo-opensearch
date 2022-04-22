@@ -1,4 +1,5 @@
 # parameters
-[params]
-[params.dnb.opensearch]
+[dnb.opensearch]
 hookLink = "https://dnbql.netlify.app/opensearch"
+# title = ""
+# description = ""

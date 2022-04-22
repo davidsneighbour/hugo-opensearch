@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.2...v1.0.0) (2022-04-22)
+
+
+### Build System
+
+* **fix:** proper env settings ([36194ca](https://github.com/davidsneighbour/hugo-opensearch/commit/36194ca0a550f18da0f960956f9d9c5da46baea5))
+
+
+### Chore
+
+* cleanup and smaller fixes ([841c343](https://github.com/davidsneighbour/hugo-opensearch/commit/841c343a5022818975bc6a6ac90c8afe3da9d53a))
+* **config:** fix config setup ([5f3f43f](https://github.com/davidsneighbour/hugo-opensearch/commit/5f3f43f9a9a30b778280eb57d1be9fa87bef3834))
+* **config:** set up mediatypes and outputformats via config ([64f758c](https://github.com/davidsneighbour/hugo-opensearch/commit/64f758c23e12cb0531db78d7a8b98c85a2f38432))
+* **release:** v0.1.3 ([a233339](https://github.com/davidsneighbour/hugo-opensearch/commit/a233339d41130117b2aab4c252b6ad30477e74ae))
+* **release:** v0.1.4 ([7bb060a](https://github.com/davidsneighbour/hugo-opensearch/commit/7bb060a6199abcfc5f1fd69c4b90b3ebae0a6599))
+
 ### [0.1.4](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.2...v0.1.4) (2022-04-21)
 
 

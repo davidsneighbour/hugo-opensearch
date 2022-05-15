@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.2...v1.0.2) (2022-05-15)
+
+
+### Bug Fixes
+
+* remove self closing tag slash ([1737dbf](https://github.com/davidsneighbour/hugo-opensearch/commit/1737dbf4e890c752fb806efff967b648958ff0ea))
+
+
+### Build System
+
+* **fix:** add README.md after release ([4ecdae0](https://github.com/davidsneighbour/hugo-opensearch/commit/4ecdae03b8405d2f27a8506ee165915127d17fbf))
+* **fix:** proper env settings ([36194ca](https://github.com/davidsneighbour/hugo-opensearch/commit/36194ca0a550f18da0f960956f9d9c5da46baea5))
+
+
+### Chore
+
+* cleanup and smaller fixes ([841c343](https://github.com/davidsneighbour/hugo-opensearch/commit/841c343a5022818975bc6a6ac90c8afe3da9d53a))
+* **config:** fix config setup ([5f3f43f](https://github.com/davidsneighbour/hugo-opensearch/commit/5f3f43f9a9a30b778280eb57d1be9fa87bef3834))
+* **config:** set up mediatypes and outputformats via config ([64f758c](https://github.com/davidsneighbour/hugo-opensearch/commit/64f758c23e12cb0531db78d7a8b98c85a2f38432))
+* **deps:** update dependencies ([47261ee](https://github.com/davidsneighbour/hugo-opensearch/commit/47261eedd426936a9b158e5944734e05de6b48d1))
+* **release:** v0.1.3 ([a233339](https://github.com/davidsneighbour/hugo-opensearch/commit/a233339d41130117b2aab4c252b6ad30477e74ae))
+* **release:** v0.1.4 ([7bb060a](https://github.com/davidsneighbour/hugo-opensearch/commit/7bb060a6199abcfc5f1fd69c4b90b3ebae0a6599))
+* **release:** v1.0.0 ([1aed183](https://github.com/davidsneighbour/hugo-opensearch/commit/1aed183af0d0deb2051e517ed53c84726c3b778a))
+* **release:** v1.0.1 ([0260c8b](https://github.com/davidsneighbour/hugo-opensearch/commit/0260c8bd2a8ee59ce2757ddaad7d1fd4df44c3d8))
+
 ### [1.0.1](https://github.com/davidsneighbour/hugo-opensearch/compare/v0.1.2...v1.0.1) (2022-04-22)
 
 
